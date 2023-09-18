@@ -22,6 +22,7 @@ class Product(models.Model):
     quantity = models.IntegerField()
     added_date = models.DateField()
 
+    objects = models.Manager()
     def __str__(self):
         return self.name
 
