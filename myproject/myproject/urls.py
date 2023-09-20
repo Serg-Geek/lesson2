@@ -19,8 +19,11 @@ from django.urls import path, include
 from myapp3.views import index
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('les3/', include('myapp3.urls')),
     path('', index),
+    path('les4/', include('myapp4.urls')),
+    path('hw_2app/', include('hw_2app.urls')),
 ]

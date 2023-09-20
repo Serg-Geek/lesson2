@@ -1,8 +1,31 @@
-<!-- product_list.html -->
-<ul>
-  {% for product in products %}
-  <li>{{ product.name }}</li>
-  {% empty %}
-  <li>No products found.</li>
-  {% endfor %}
-</ul>
+
+  <ul>
+    {% for product in week_products %}
+    <li>{{ product.name }}</li>
+    {% empty %}
+    <li>No products found.</li>
+    {% endfor %}
+  </ul>
+
+  <ul>
+    {% for product in month_products %}
+    <li>{{ product.name }}</li>
+    {% empty %}
+    <li>No products found.</li>
+    {% endfor %}
+  </ul>
+
+  <ul>
+    {% for product in year_products %}
+    <li>{{ product.name }}</li>
+    {% empty %}
+    <li>No products found.</li>
+    {% endfor %}
+  </ul>
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload Photo</button>
+  </form>
+

@@ -21,10 +21,13 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     quantity = models.IntegerField()
     added_date = models.DateField()
+    photo = models.ImageField(upload_to='product_photos/', default='default_product_photo.jpg')
 
     objects = models.Manager()
+
     def __str__(self):
         return self.name
+
 
 
 # Модель "Заказ"
